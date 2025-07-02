@@ -13,7 +13,7 @@ import requests
 #-------ENDPOINT DA API -----
 API_URL = "http://127.0.0.1:8000/almoxarifado"
 
-# ----- FUNÇÃO PARA REGISTRAR UMA PEÇA -----
+# ----- FUNÇÃO PARA REGISTRAR UMA PEÇA -
 def register_part():
     part_name = entry_part_name.get().strip()
     manufacturer = entry_manufacturer.get().strip()
