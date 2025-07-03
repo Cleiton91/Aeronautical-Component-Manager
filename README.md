@@ -1,2 +1,2 @@
 # Aeronautical Component Manager
-Tkinter graphical interface, integrated with the database (Mysql), for registering aeronautical parts.
+APIS system, with Tkinter and streamlit graphical interface, integrated with the database (Mysql), for registering aeronautical parts.
