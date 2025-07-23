@@ -10,9 +10,13 @@ import requests
 import base64
 import pandas as pd
 import os
+from dotenv import load_dotenv
 
+# Carregar variáveis do .env
+load_dotenv()
 
-API_URL = "http://127.0.0.1:8000/almoxarifado"
+# Obter URL do Render do .env
+API_URL = os.getenv("API_URL")
 
 def get_base64_image(path):
     with open(path, "rb") as f:
