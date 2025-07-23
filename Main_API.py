@@ -21,8 +21,13 @@ load_dotenv()
                 # BANCO DE DADOS #
 
 # Obter senha do .env
-senha = quote_plus(os.getenv("DB_PASSWORD"))
-DATABASE_URL = f"mysql+pymysql://root:{senha}@localhost/manutenção_db"
+DB_USER = os.getenv("DB_USER")
+DB_PASSWORD = quote_plus(os.getenv("DB_PASSWORD"))
+DB_HOST = os.getenv("DB_HOST")
+DB_NAME = os.getenv("DB_NAME")
+
+DATABASE_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
+
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
