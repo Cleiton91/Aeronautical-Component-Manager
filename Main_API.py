@@ -18,7 +18,7 @@ from dotenv import load_dotenv
 # Carregar variáveis do .env
 load_dotenv()
 
-                # BANCO DE DADOS #
+                ## BANCO DE DADOS ##
 
 # Obter senha do .env
 DB_USER = os.getenv("DB_USER")
