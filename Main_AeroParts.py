@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jul 23 11:39:06 2025
-
-@author: cleit
-"""
 
 #BACK-END  (FAST API)
  
