@@ -36,7 +36,7 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("art Registration")
+st.title("Part Registration")
 
 
 with st.form("part_form"):
