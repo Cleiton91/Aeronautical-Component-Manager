@@ -32,8 +32,8 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 #LOGIN
-LOG_USER= os.getenv ("LOG_USER")
-LOG_PASSWORD = os.getenv ("LOG_PASSWORD")
+USUARIO = os.getenv ("LOG_USER")
+SENHA = os.getenv ("LOG_PASSWORD")
 
 params = st.query_params
 if "auth" not in params or params["auth"][0] != "1":
