@@ -36,6 +36,10 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
+#LOGIN
+USUARIO = os.getenv ("LOG_USER")
+SENHA = os.getenv ("LOG_PASSWORD")
+
 st.title("Part Registration")
 
 
