@@ -4,6 +4,7 @@ Created on Tue Jun 17 16:02:43 2025
 
 @author: cleit
 """
+# FRONT-END (STREAMLIT) 
 
 import streamlit as st
 import requests
@@ -15,7 +16,7 @@ from dotenv import load_dotenv
 # Carregar variáveis do .env
 load_dotenv()
 
-# Obter URL do Render do .env
+# Conexao com Back-end via .env
 API_URL = os.getenv("API_URL")
 
 def get_base64_image(path):
@@ -35,7 +36,7 @@ st.markdown(f"""
     </style>
 """, unsafe_allow_html=True)
 
-st.title("Part Registration")
+st.title("art Registration")
 
 
 with st.form("part_form"):
