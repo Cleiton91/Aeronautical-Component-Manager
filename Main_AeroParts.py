@@ -5,7 +5,8 @@ Created on Wed Jul 23 11:39:06 2025
 @author: cleit
 """
 
-
+#BACK-END  (FAST API)
+ 
 from fastapi import FastAPI, HTTPException, Depends
 from pydantic import BaseModel
 from typing import List
@@ -21,15 +22,14 @@ load_dotenv()
 
                 ## BANCO DE DADOS ##
 
-# Obter senha do .env
+# Acesso ao Banco via senhas do .env
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = quote_plus(os.getenv("DB_PASSWORD"))
 DB_HOST = os.getenv("DB_HOST")
 DB_NAME = os.getenv("DB_NAME")
 
+#criando conexao
 DATABASE_URL = f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@{DB_HOST}/{DB_NAME}"
-
-
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
@@ -45,7 +45,7 @@ class PartDB(Base):
     quantity = Column(Integer)
     value = Column(Float)
 
-# Criar a tabela
+# Criar a tabela automaticamente
 Base.metadata.create_all(bind=engine)
 
                  # FASTAPI BACKEND #

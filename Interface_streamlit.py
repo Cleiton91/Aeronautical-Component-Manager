@@ -39,6 +39,7 @@ st.markdown(f"""
 #LOGIN
 USUARIO = os.getenv ("LOG_USER")
 SENHA = os.getenv ("LOG_PASSWORD")
+
 params = st.query_params
 if "auth" not in params or params["auth"][0] != "1":
     st.title("Login")
