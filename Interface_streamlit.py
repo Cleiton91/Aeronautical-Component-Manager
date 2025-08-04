@@ -39,6 +39,18 @@ st.markdown(f"""
 #LOGIN
 USUARIO = os.getenv ("LOG_USER")
 SENHA = os.getenv ("LOG_PASSWORD")
+params = st.query_params
+if "auth" not in params or params["auth"][0] != "1":
+    st.title("Login")
+    user = st.text_input("Usuário")
+    password = st.text_input("Senha", type="password")
+    if st.button("Entrar"):
+        if user == USUARIO and password == SENHA:
+            st.query_params["auth"] = "1"
+            st.rerun()
+        else:
+            st.error("Incorrect username or password.")
+    st.stop()
 
 st.title("Part Registration")
 
