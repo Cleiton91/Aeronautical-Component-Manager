@@ -32,15 +32,15 @@ st.markdown(f"""
 """, unsafe_allow_html=True)
 
 #LOGIN
-USER = os.getenv ("LOGIN_USER")
-PASSWORD = os.getenv ("LOGIN_PASSWORD")
+USUARIO = os.getenv ("LOGIN_USER")
+SENHA = os.getenv ("LOGIN_PASSWORD")
 
 params = st.query_params
 if "auth" not in params or params["auth"][0] != "1":
     st.title("Login")
-    user = st.text_input("Usuário")
-    password = st.text_input("Senha", type="password")
-    if st.button("Entrar"):
+    user = st.text_input("User")
+    password = st.text_input("Password", type="password")
+    if st.button("Enter"):
         if user == USUARIO and password == SENHA:
             st.query_params["auth"] = "1"
             st.rerun()
